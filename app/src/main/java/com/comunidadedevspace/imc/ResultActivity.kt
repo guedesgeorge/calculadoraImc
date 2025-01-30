@@ -15,12 +15,12 @@ class ResultActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_result2)
 
-             val result = intent.getFloatExtra(KEY_RESULT_IMC, 0f)
+        val result = intent.getFloatExtra(KEY_RESULT_IMC, 0f)
 
-             val tvResult = findViewById<TextView>(R.id.tv_result)
-             val tvClassificacao = findViewById<TextView>(R.id.tv_clasificacao)
+        val tvResult = findViewById<TextView>(R.id.tv_result)
+        val tvClassificacao = findViewById<TextView>(R.id.tv_clasificacao)
 
-             tvResult.text = result.toString()
+        tvResult.text = result.toString()
 
 
         val classificacao: String = if (result <= 18.5f){
@@ -37,5 +37,5 @@ class ResultActivity : AppCompatActivity() {
 
         tvClassificacao.text = classificacao
 
-        }
     }
+}

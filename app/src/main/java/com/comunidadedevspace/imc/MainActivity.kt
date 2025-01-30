@@ -57,13 +57,15 @@ class MainActivity : AppCompatActivity() {
 
 
 // Intent - Classe do proprio android
-val intent = Intent(this, ResultActivity::class.java)
-intent.putExtra(KEY_RESULT_IMC, resultado)
-startActivity(intent)
+                val intent = Intent(this, ResultActivity::class.java)
+                intent.putExtra(KEY_RESULT_IMC, resultado)
+                startActivity(intent)
 
-println("Acão do bottom " + resultado)
-   }
+                // Cores
+                // EditText Background
+                // gradiant + icone + titulo + descrição
+            }
 
-  }
- }
+        }
+    }
 }

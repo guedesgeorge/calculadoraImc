@@ -19,6 +19,7 @@
         tools:text="23.66" />
 
 
+
     <TextView
         android:id="@+id/tv_clasificacao_label"
         android:layout_width="wrap_content"
