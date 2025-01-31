@@ -5,7 +5,7 @@ Desc
 <!-- You can add more screenshots here if you like -->
 Screenshots
 
-<img src="https://github.com/user-attachments/assets/ceb369cc-e4ad-475d-842d-f69957eb687d" width-70/> <img  src="https://github.com/user-attachments/assets/b584e34c-d12e-41da-a2d3-a9a1dc1bd463" width-70/>
+<img src="https://github.com/user-attachments/assets/db694813-8d01-4350-b19a-7216cae35706" width-70/> <img  src="https://github.com/user-attachments/assets/b584e34c-d12e-41da-a2d3-a9a1dc1bd463" width-70/>
 
 
 ## Tecnologias
