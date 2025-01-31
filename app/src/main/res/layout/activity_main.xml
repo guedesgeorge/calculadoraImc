@@ -1,90 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <!-- Cabeçalho -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/vg_header"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/gradient_bg"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/gradient_bg"
+        android:padding="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+
+        <!-- Ícone -->
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_margin="24dp"
+            android:id="@+id/img_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_weight"
             android:tint="@color/white"
-            android:layout_height="wrap_content">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="16dp"/>
 
-        </ImageView>
+        <!-- Textos -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintStart_toStartOf="@id/img_logo"
+            app:layout_constraintTop_toBottomOf="@id/img_logo">
 
-    </LinearLayout>
+            <TextView
+                android:text="Calculador IMC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
-    <Button
-        android:id="@+id/btn_calcular"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Calcular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
+            <TextView
+                android:text="Preencha todos os campos para calcular seu IMC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="48dp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Campo de entrada de Peso -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:hintEnabled="false"> <!-- Adicione essa linha -->
-
-        >
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vg_header"
+        app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_peso"
-            android:drawableEnd="@drawable/ic_weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="6"
             android:hint="Digite o seu peso ex: 70.200"
             android:background="@drawable/rounded_bg"
             android:inputType="numberDecimal"
-
-            />
+            android:drawableEnd="@drawable/ic_weight"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Campo de entrada de Altura -->
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:hintEnabled="false"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textInputLayout3">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edt_altura"
-            android:drawableEnd="@drawable/ic_height"
-            android:maxLength="4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
+            android:maxLength="4"
+            android:hint="Digite sua altura ex: 1.70"
             android:background="@drawable/rounded_bg"
-            android:hint="Digite sua altura ex: 1.70" />
+            android:inputType="numberDecimal"
+            android:drawableEnd="@drawable/ic_height"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botão Calcular -->
+    <Button
+        android:id="@+id/btn_calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

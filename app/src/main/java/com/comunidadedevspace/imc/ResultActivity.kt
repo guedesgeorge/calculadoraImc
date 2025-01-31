@@ -18,7 +18,7 @@ class ResultActivity : AppCompatActivity() {
         val result = intent.getFloatExtra(KEY_RESULT_IMC, 0f)
 
         val tvResult = findViewById<TextView>(R.id.tv_result)
-        val tvClassificacao = findViewById<TextView>(R.id.tv_clasificacao)
+        val tvClassificacao = findViewById<TextView>(R.id.tv_classificacao)
 
         tvResult.text = result.toString()
 
