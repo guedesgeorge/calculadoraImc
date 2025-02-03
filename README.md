@@ -17,7 +17,7 @@ Screenshots
 - LinearLayout
 - ConstraintLayout
 - 
-  --  Views
+  -  Views
 - ImageView
 - TextView
 - EditText
