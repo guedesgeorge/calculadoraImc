@@ -16,7 +16,6 @@ Screenshots
 - ViewGroups
 - LinearLayout
 - ConstraintLayout
-- 
   -  Views
 - ImageView
 - TextView
